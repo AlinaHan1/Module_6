@@ -1,9 +1,11 @@
 class Animal:
-    alive = True  # атрибут родительского класса (живай)
-    fed = False  # атрибут родительского класса (накормленный)
+    #alive = True  # атрибут родительского класса (живай)
+    #fed = False  # атрибут родительского класса (накормленный)
 
-    def __init__(self, name):
+    def __init__(self, name, alive=True, fed=False):
         self.name = name
+        self.alive = alive
+        self.fed = fed
 
     def eat(self, food):
         if isinstance(food,
@@ -25,10 +27,11 @@ class Predator(Animal):
 
 
 class Plant:
-    edible = False  # # атрибут родительского класса (съедобность)
+    #edible = False  # # атрибут родительского класса (съедобность)
 
-    def __init__(self, name):
+    def __init__(self, name, edible=False):
         self.name = name
+        self.edible = edible
 
 
 class Flower(Plant):
